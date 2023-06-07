@@ -1,16 +1,14 @@
 # 스케이트 게임
-
----
-
+<br/><br/>
 - **게임 플레이 링크**
     
-    [https://www.glowscript.org/#/user/thgee/folder/MyPrograms/program/skategame](https://www.glowscript.org/#/user/thgee/folder/MyPrograms/program/skategame)
+    [https://www.glowscript.org/#/user/thgee/folder/MyPrograms/program/skategame](https://www.glowscript.org/#/user/thgee/folder/MyPrograms/program/skategame)  
     
-
+    <br/>
 ## 주제
 
 캐릭터가 장애물들을 피하며 빙판 위를 달리는 게임입니다.
-
+<br/><br/>
 ## 게임설명
 
 빙판위에 떠다니는 장애물과 충돌하면 게임이 종료됩니다.
@@ -19,7 +17,11 @@
 
 게임 중간에 나오는 아이템들은 점프를 이용하여 획득할 수 있습니다.
 
-아이템 효과 지속시간은 3초입니다.
+아이템 효과 지속시간은 3초입니다.  
+  
+ <br/>   
+     
+  
 
 ### 조작법
 
@@ -29,58 +31,80 @@
 
 Spacebar : 플레이어가 빙판위를 미끄러지며 정지합니다.
 
+
+<br/>
+<br/>
+
 ### 아이템
 
-![Untitled](Untitled.png)
+<br/>
 
-![Untitled](Untitled%201.png)
-
-![Untitled](Untitled%202.png)
+![Untitled](https://github.com/thgee/VPython_skate_game/assets/102576089/f3c521bd-8d9f-4548-af4c-0015b76e7b3a)
 
 **위성 아이템**
 
 플레이어 주변에 4개의 위성이 생성되고, 플레이어를 중심으로 공전합니다. 공전하는 위성에 충돌하는 장애물들을 날려버립니다.
+<br/>
+
+
+![Untitled 1](https://github.com/thgee/VPython_skate_game/assets/102576089/5f39b95b-e566-4632-b706-02e3e2d5bc49)
+
 
 **점프 아이템**
 
 점프력이 강화됩니다.
 
+<br/>
+
+![Untitled 2](https://github.com/thgee/VPython_skate_game/assets/102576089/dd251c48-c84d-4515-98f1-e52a341ec1f3)
+ 
 ************************************브레이크 아이템************************************
 
 브레이크 성능이 강화됩니다.
+<br/>
+<br/>
 
 ## 기능구현
 
 - 캐릭터가 달려가는 모습을 캐릭터의 시계, 반시계 회전을 반복하는 방식으로 구현하였습니다.
+<br/>
 
 - 브레이크 시 캐릭터가 옆으로 돌면서 미끄러지고, 스키드마크가 생기도록 구현하였습니다.
     
-    ![Untitled](Untitled%203.png)
-    
+    ![Untitled 3](https://github.com/thgee/VPython_skate_game/assets/102576089/12bf0a39-1bdc-42cf-b649-70e30a5d6ac4)
+
+<br/>
 
 - 플레이어가 장애물과 충돌하여 게임이 종료되면 “Game Over” 텍스트가 화면에 3D로 출력됩니다. 또한 캐릭터의 색깔이 빨간색으로 변하며 빙판 위에 쓰러집니다.
     
-    ![Untitled](Untitled%204.png)
+    ![Untitled 4](https://github.com/thgee/VPython_skate_game/assets/102576089/b624b76d-f5e3-4c63-b452-11e7f75e58b8)
     
+    <br/>
 
-- 아이템을 먹으면 아이템 지속시간동안 플레이어의 색깔이 아이템 색깔과 같아지도록 구현했습니다.
+
+- 아이템을 먹으면 아이템 지속시간동안 플레이어의 색깔이 아이템 색깔과 같아지도록 구현했습니다.<br/>
 
 - 아이템 지속시간 동안은 다른아이템을 획득할 수 없도록, 다른 아이템들은 일시적으로 화면에서 사라지도록 구현했습니다.
 
 - 위성아이템을 획득하면 위성 4개가 플레이어 주변을 등속원운동 하고, 위성과 장애물이 닿으면 장애물을 날려버립니다.
-    
     위성아이템의 지속시간이 끝나면 각 위성들은 사방으로 퍼지며 장애물들을 밀어내고 사라집니다.
+    <br/>
     
-    ![Untitled](Untitled%205.png)
-    
+    ![Untitled 5](https://github.com/thgee/VPython_skate_game/assets/102576089/4f575d6e-a48c-4aea-b48e-0542eda6ada8)
+<br/>
+ 
 - 점프 아이템을 획득하면 점프력이 강화되는데, 이 때 카메라도 플레이어와 함께 높이 점프하도록 하여 역동적인 움직임을 강조했습니다.
     
-    ![Untitled](Untitled%206.png)
-    
 
-- 진행방향이 정방향으로 되어있으면 플레이어와 장애물의 거리가 감이 잘 잡히지 않기 때문에, 진행방향을 사선으로 기울여서 더 수월하게 장애물을 피할 수 있도록 하였습니다.
+    ![Untitled 6](https://github.com/thgee/VPython_skate_game/assets/102576089/01fa5b1e-af83-4fed-b65f-4f6f628c1c67)<br/>
+
+
+- 진행방향이 정방향으로 되어있으면 플레이어와 장애물의 거리가 감이 잘 잡히지 않기 때문에, 진행방향을 사선으로 기울여서 더 수월하게 장애물을 피할 수 있도록 하였습니다.<br/>
 
 - 방향키를 꾹 눌렀을 때 키 재입력시간 때문에 플레이어의 움직임이 부자연스러웠던 현상을 키보드 입력 로직을 수정하여 자연스럽게 움직일수 있도록 구현하였습니다.
+
+<br/>
+<br/>
 
 ## 시행착오
 
