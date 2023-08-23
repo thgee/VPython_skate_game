@@ -47,8 +47,7 @@ Spacebar : 플레이어가 빙판위를 미끄러지며 정지합니다.
 <br/>
 
 
-![Untitled 1](https://github.com/thgee/VPython_skate_game/assets/102576089/5f39b95b-e566-4632-b706-02e3e2d5bc49)
-
+![image](https://github.com/thgeee/VPython_skate_game/assets/102576089/2047e138-b544-4de0-8de1-318a6291e254)
 
 **점프 아이템**
 
@@ -58,7 +57,7 @@ Spacebar : 플레이어가 빙판위를 미끄러지며 정지합니다.
 
 ![Untitled 2](https://github.com/thgee/VPython_skate_game/assets/102576089/dd251c48-c84d-4515-98f1-e52a341ec1f3)
  
-************************************브레이크 아이템************************************
+**브레이크 아이템**
 
 브레이크 성능이 강화됩니다.
 <br/>
