@@ -21,9 +21,9 @@ camera_type = 1 # 1: 카메라가 y좌표계로 움직이지않음 2: 점프시 
 
 # ------------ 환경설정 ------------ 
 scene = canvas(title = '스케이트 게임', width=1000, height=500, background=vec(0.8, 0.7, 0.6))
-scene.camera.pos = vec(0.56, 2.44, -1)
 scene.camera.axis = vector(-0.56, -1.44, -1.43)
 scene.camera.forward = vector(0, 0, -100)
+scene.camera.pos = vec(0.56, 2.44, -1)
 scene.camera.v = vec(0, 0, -speed)
 scene.camera.a = vec(0, 0, 0)
 distant_light(direction=vector( 0,  1,  0), color=vec(0.9, 0.7, 0.8))
@@ -40,7 +40,7 @@ right_ear = cone(pos=vector(0.08, 0.08, 0), axis=vector(-0.04, 0, 0), radius=0.0
 # player의 팔과 다리
 left_arm = cylinder(pos=vector(-0.1, 0, 0), axis=vector(-0.02, 0, 0), radius=0.02)
 right_arm = cylinder(pos=vector(0.1, 0, 0), axis=vector(0.02, 0, 0), radius=0.02)
-left_leg = cylinder(pos=vector(-0.05, -0.08, 0), axis=vector(-0.04, -0.08, 0), radius=0.02, make_trail = True)
+left_leg = cylinder(pos=vector(-0.05, -0.08, 0), axis=vector(-0.04, -0.08, 0), radius=0.02)
 right_leg = cylinder(pos=vector(0.05, -0.08, 0), axis=vector(0.04, -0.08, 0), radius=0.02)
 
 # player의 눈
@@ -248,7 +248,8 @@ def handle_keys():
         global mode
         player.axis = vec(0, 0, 1)
         mode = 0 # 정지모드로 변경
-
+        
+        
 def handle_keyup_space(event):
     if event.key == ' ' and mode == 0:
         
@@ -380,8 +381,9 @@ while True:
     
         if item == 1: 
             mu = 1.8 # 마찰계수 증가
+            player.trail_color = vec(1, 0, 0)
             player.color = vec(0.45, 0.49,1)
-            
+           
         else if item == 2:
             player.color = vec(0.47, 1,0.37)
             jump = 3
@@ -419,6 +421,7 @@ while True:
         
         if item == 1:
             mu = 0.5 # 마찰계수가 원래대로 돌아옴
+            player.trail_color = vec(0.2, 0.4, 1)
             item = 0
             
         else if item == 2:
